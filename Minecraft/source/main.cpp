@@ -1,5 +1,6 @@
 #include "gl/Window.hpp"
 #include "gl/Shader.hpp"
+#include "VAO.hpp"
 #include <iostream>
 
 void init()
@@ -31,7 +32,7 @@ int main()
 		std::cout << "Failed to initialize GLAD\n";
 		return -1;
 	}
-	
+
 	Shader shader("shaders/vertex.glsl", "shaders/fragment.glsl");
 	shader.use();
 
@@ -44,4 +45,6 @@ int main()
 		win.swapBuffers();
 		glfwPollEvents();
 	}
+
+	glfwTerminate();
 }
