@@ -84,9 +84,8 @@ typename Window::KeyState Window::getKey(int key) const
 	else return KeyState::None;
 }
 
-void Window::framebufferResizeCallback(GLFWwindow* window, int width, int height)
+void Window::framebufferResizeCallback([[maybe_unused]] GLFWwindow* window, int width, int height)
 {
-	(void)window;
 	glViewport(0, 0, width, height);
 }
 

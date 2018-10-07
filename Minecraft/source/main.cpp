@@ -25,8 +25,15 @@ int main()
 	Window win(800, 600, "Minecraft");
 	win.makeContextCurrent();
 
+	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+	{
+		std::cout << "Failed to initialize GLAD\n";
+		return -1;
+	}
+
 	while (!win.shouldClose())
 	{
 		win.swapBuffers();
+		glfwPollEvents();
 	}
 }

@@ -25,9 +25,9 @@ public:
 	Window& operator=(Window&& other);
 	~Window();
 
-	void setClose(bool close);
+	
 	bool shouldClose() const;
-	//Calling this has the same effect as calling setClose(true)
+	//close the window
 	void close();
 	void makeContextCurrent();
 
@@ -40,7 +40,7 @@ public:
 
 private:
 	static void framebufferResizeCallback(GLFWwindow* window, int width, int height);
-
+	void setClose(bool close);
 	GLFWwindow* m_window = nullptr;
 	std::size_t m_width, m_height;
 };
