@@ -1,4 +1,5 @@
 #include "gl/Window.hpp"
+#include "gl/Shader.hpp"
 #include <iostream>
 
 void init()
@@ -30,9 +31,16 @@ int main()
 		std::cout << "Failed to initialize GLAD\n";
 		return -1;
 	}
+	
+	Shader shader("shaders/vertex.glsl", "shaders/fragment.glsl");
+	shader.use();
+
+	glClearColor(0, 0, 255, 0);
 
 	while (!win.shouldClose())
 	{
+		glClear(GL_COLOR_BUFFER_BIT);
+
 		win.swapBuffers();
 		glfwPollEvents();
 	}

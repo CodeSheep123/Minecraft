@@ -27,9 +27,15 @@
     <ClCompile Include="source\gl\Window.cpp">
       <Filter>Source Files\gl</Filter>
     </ClCompile>
+    <ClCompile Include="source\gl\Shader.cpp">
+      <Filter>Source Files\gl</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\gl\Window.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gl\Shader.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

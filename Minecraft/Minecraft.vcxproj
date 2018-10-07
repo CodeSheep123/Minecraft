@@ -20,10 +20,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\glad\src\glad.c" />
+    <ClCompile Include="source\gl\Shader.cpp" />
     <ClCompile Include="source\gl\Window.cpp" />
     <ClCompile Include="source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\gl\Shader.hpp" />
     <ClInclude Include="source\gl\Window.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
